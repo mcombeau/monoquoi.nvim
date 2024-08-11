@@ -5,56 +5,36 @@ local palette = {
 
     none = 'NONE',
 
-    -- Blacks. Not in base Nord.
-    black0 = '#191D24',
-    black1 = '#1E222A',
-    -- Slightly darker than bg.  Very useful for certain popups
-    black2 = '#222630',
-
-    -- Grays
-    -- This color is used on their website's dark theme.
-    gray0 = '#242933', -- bg
-    -- Polar Night.
-    gray1 = '#2E3440',
-    gray2 = '#3B4252',
-    gray3 = '#434C5E',
-    gray4 = '#4C566A',
-
-    -- A light blue/gray.
-    -- From @nightfox.nvim.
-    gray5 = '#60728A',
-
-    -- Dim white.
-    -- default fg, has a blue tint.
-    white0_normal = '#BBC3D4',
-    -- less blue tint
-    white0_reduce_blue = '#C0C8D8',
-
-    -- Snow storm.
-    white1 = '#D8DEE9',
-    white2 = '#E5E9F0',
-    white3 = '#ECEFF4',
-
-    -- Frost.
-    blue0 = '#5E81AC',
-    blue1 = '#81A1C1',
-    blue2 = '#88C0D0',
-
+    accent_default = '#bf9540',
+    grey = {
+        dark = '#242933', -- bg
+        dimmer = '#2E3440',
+        dim = '#3B4252',
+        light = '#434C5E',
+        bright = '#4C566A',
+        brighter = '#60728A',
+    },
+    white = {
+        dark = '#C0C8D8',
+        dim = '#D8DEE9',
+        light = '#E5E9F0',
+        bright = '#ECEFF4',
+    },
     black = {
         dark = '#191D24',
-        medium = '#1E222A',
-        -- Slightly darker than bg.  Very useful for certain popups
+        dim = '#1E222A',
         light = '#222630',
+    },
+    blue = {
+        base = '#5E81AC',
+        bright = '#81A1C1',
+        dim = '#88C0D0',
     },
     cyan = {
         base = '#8FBCBB',
         bright = '#9FC6C5',
         dim = '#80B3B2',
     },
-
-    -- Aurora.
-    -- These colors are used a lot, so we need variations for them.
-    -- Base colors are from original Nord palette.
     red = {
         base = '#BF616A',
         bright = '#C5727A',

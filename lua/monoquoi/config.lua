@@ -5,6 +5,8 @@ local defaults = {
     on_palette = function(palette)
         return palette
     end,
+    -- Accent color
+    accent_color = '#bf9540',
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.

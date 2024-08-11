@@ -18,15 +18,15 @@ function module.get_groups()
     groups.Boolean = { link = 'Number' } --  a boolean constant: TRUE  false
     groups.Float = { link = 'Number' } --    a floating point constant: 2.3e10
     groups.None = { fg = colors.none, bg = colors.none }
-    groups.String = { fg = colors.red.base } --   a string constant: "this is a string"
+    groups.String = { fg = colors.accent } --   a string constant: "this is a string"
     groups.Character = { fg = colors.green.base } --  a character constant: 'c', '\n'
     groups.Variable = { fg = colors.fg }
     groups.Namespace = { fg = colors.yellow.dim }
     groups.Field = { fg = colors.cyan.base }
     groups.Title = { fg = colors.yellow.base }
-    groups.Builtin = { fg = colors.blue0 }
+    groups.Builtin = { fg = colors.blue.base }
     groups.Identifier = { fg = colors.fg } -- (preferred) any variable name
-    groups.Function = { fg = colors.blue2 } -- function name (also: methods for classes)
+    groups.Function = { fg = colors.blue.dim } -- function name (also: methods for classes)
     groups.Keyword = { fg = colors.orange.base, bold = options.bold_keywords } --  any other keyword
     groups.Statement = { link = 'Keyword' } -- (preferred) any statement
     groups.Conditional = { link = 'Keyword' } --  if, then, else, endif, switch, etc.
@@ -39,31 +39,31 @@ function module.get_groups()
     groups.Include = { link = 'Macro' } --  preprocessor #include
     groups.Define = { link = 'Macro' } --   preprocessor #define
     groups.PreCondit = { link = 'Macro' } --  preprocessor #if, #else, #endif, etc.
-    groups.Comment = { fg = colors.gray4, italic = options.italic_comments }
+    groups.Comment = { fg = colors.grey.bright, italic = options.italic_comments }
     groups.Type = { fg = colors.yellow.base } -- (preferred) int, long, char, etc.
     groups.StorageClass = { link = 'Keyword' } -- static, register, volatile, etc.
     groups.Structure = { link = 'Type' } --  struct, union, enum, etc.
     groups.Typedef = { link = 'Type' } --  A typedef
-    groups.Special = { fg = colors.blue1 } -- (preferred) any special symbol
+    groups.Special = { fg = colors.blue.bright } -- (preferred) any special symbol
     -- SpecialChar   = { } --  special character in a constant
     -- Tag           = { } --    you can use CTRL-] on this
-    groups.Delimiter = { italic = true, fg = colors.gray5 } --  character that needs attention
+    groups.Delimiter = { italic = true, fg = colors.grey.brightest } --  character that needs attention
     -- SpecialComment= { } -- special things inside a comment
     -- Debug         = { } --    debugging statements
     groups.Underlined = { underline = true } -- (preferred) text that stands out, HTML links
     groups.Bold = { bold = true }
     groups.Italic = { italic = true }
     -- ("Ignore", below, may be invisible...)
-    groups.Ignore = { fg = colors.gray2 } -- (preferred) left blank, hidden  |hl-Ignore|
+    groups.Ignore = { fg = colors.grey.dim } -- (preferred) left blank, hidden  |hl-Ignore|
     groups.Error = { fg = colors.error } -- (preferred) any erroneous construct
-    groups.Todo = { bg = colors.yellow.dim, fg = colors.black0 } -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    groups.Note = { fg = colors.black0, bg = colors.info }
+    groups.Todo = { bg = colors.yellow.dim, fg = colors.black.dark } -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    groups.Note = { fg = colors.black.dark, bg = colors.info }
     -- What are these?
-    groups.qfLineNr = { fg = colors.gray4 }
-    groups.qfFileName = { fg = colors.blue1 }
+    groups.qfLineNr = { fg = colors.grey.bright }
+    groups.qfFileName = { fg = colors.blue.bright }
     groups.htmlH1 = { fg = colors.yellow.base, bold = true }
     groups.htmlH2 = { fg = colors.orange.base }
-    groups.Link = { fg = colors.blue1, underline = true }
+    groups.Link = { fg = colors.blue.bright, underline = true }
     groups.CodeBlock = { bg = colors.bg_float, fg = colors.fg }
     groups.mkdHeading = { link = 'htmlH1' }
     groups.mkdCode = { link = 'CodeBlock' }
@@ -78,11 +78,11 @@ function module.get_groups()
     groups.markdownH2 = { link = 'htmlH2' }
     groups.markdownLinkText = { link = 'Link' }
     groups['@punctuation.special.markdown'] = { fg = colors.orange.base, bold = true }
-    groups['@text.todo.unchecked'] = { fg = colors.blue1 } -- For brackets and parens.
+    groups['@text.todo.unchecked'] = { fg = colors.blue.bright } -- For brackets and parens.
     groups['@text.todo.checked'] = { fg = colors.green.base } -- For brackets and parens.
-    groups['@text.literal.markdown_inline'] = { bg = colors.black0, fg = colors.blue1 }
+    groups['@text.literal.markdown_inline'] = { bg = colors.black.dark, fg = colors.blue.bright }
     groups['@text.literal.markdown'] = { link = 'Normal' }
-    groups['helpCommand'] = { bg = colors.black0, fg = colors.blue1 }
+    groups['helpCommand'] = { bg = colors.black.dark, fg = colors.blue.bright }
     groups.debugPC = { bg = colors.bg_sidebar } -- used for highlighting the current line in terminal-debug
     groups.debugBreakpoint = { fg = colors.red.bright } -- used for breakpoint colors in terminal-debug
 
@@ -98,17 +98,17 @@ function module.get_groups()
     groups.DiagnosticWarn = { fg = colors.warning } -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     groups.DiagnosticInfo = { fg = colors.info } -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     groups.DiagnosticHint = { fg = colors.hint } -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    groups.DiagnosticVirtualTextError = { bg = colors.gray1, fg = colors.error, bold = true } -- Used for "Error" diagnostic virtual text
-    groups.DiagnosticVirtualTextWarn = { bg = colors.gray1, fg = colors.warning } -- Used for "Warning" diagnostic virtual text
-    groups.DiagnosticVirtualTextWarning = { bg = colors.gray1, fg = colors.warning } -- Used for "Warning" diagnostic virtual text
-    groups.DiagnosticVirtualTextInfo = { bg = colors.gray1, fg = colors.info } -- Used for "Information" diagnostic virtual text
-    groups.DiagnosticVirtualTextHint = { bg = colors.gray1, fg = colors.hint } -- Used for "Hint" diagnostic virtual text
+    groups.DiagnosticVirtualTextError = { bg = colors.grey.dimmer, fg = colors.error, bold = true } -- Used for "Error" diagnostic virtual text
+    groups.DiagnosticVirtualTextWarn = { bg = colors.grey.dimmer, fg = colors.warning } -- Used for "Warning" diagnostic virtual text
+    groups.DiagnosticVirtualTextWarning = { bg = colors.grey.dimmer, fg = colors.warning } -- Used for "Warning" diagnostic virtual text
+    groups.DiagnosticVirtualTextInfo = { bg = colors.grey.dimmer, fg = colors.info } -- Used for "Information" diagnostic virtual text
+    groups.DiagnosticVirtualTextHint = { bg = colors.grey.dimmer, fg = colors.hint } -- Used for "Hint" diagnostic virtual text
     groups.DiagnosticUnderlineError = { undercurl = true, sp = colors.error } -- Used to underline "Error" diagnostics
     groups.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.warning } -- Used to underline "Warning" diagnostics
     groups.DiagnosticUnderlineInfo = { undercurl = true, sp = colors.info } -- Used to underline "Information" diagnostics
     groups.DiagnosticUnderlineHint = { undercurl = true, sp = colors.hint } -- Used to underline "Hint" diagnostics
     groups.DiagnosticText = { bg = colors.bg_float }
-    groups.LspSignatureActiveParameter = { bg = colors.gray3, bold = true }
+    groups.LspSignatureActiveParameter = { bg = colors.grey.brighter, bold = true }
     groups.LspCodeLens = { fg = colors.comment }
     groups.LspInfoBorder = { link = 'FloatBorder' }
     groups.ALEErrorSign = { fg = colors.error }
@@ -118,15 +118,15 @@ function module.get_groups()
 
     groups.Comment = { fg = colors.comment, italic = options.italic_comments } -- any comment
     groups.ColorColumn = { bg = colors.bg_visual } -- used for the columns set with 'colorcolumn'
-    groups.Conceal = { fg = colors.gray3 } -- placeholder characters substituted for concealed text (see 'conceallevel')
-    groups.Cursor = { fg = colors.black0, bg = colors.fg } -- character under the cursor
-    groups.lCursor = { fg = colors.black0 } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    groups.CursorIM = { fg = colors.black0 } -- like Cursor, but used when in IME mode |CursorIM|
+    groups.Conceal = { fg = colors.grey.brighter } -- placeholder characters substituted for concealed text (see 'conceallevel')
+    groups.Cursor = { fg = colors.black.dark, bg = colors.fg } -- character under the cursor
+    groups.lCursor = { fg = colors.black.dark } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    groups.CursorIM = { fg = colors.black.dark } -- like Cursor, but used when in IME mode |CursorIM|
     groups.CursorColumn = { bg = colors.bg_visual, bold = options.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
     groups.CursorLine = { bg = colors.bg_visual, bold = options.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    groups.CursorLineNr = { fg = colors.gray5, bold = options.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    groups.CursorLineNr = { fg = colors.grey.brightest, bold = options.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     groups.CursorLineSign = {}
-    groups.Directory = { fg = colors.blue1 } -- directory names (and other special names in listings)
+    groups.Directory = { fg = colors.blue.bright } -- directory names (and other special names in listings)
     groups.EndOfBuffer = { fg = colors.fg_sidebar } -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { } -- cursor in a focused terminal
     -- TermCursorNC= { } -- cursor in an unfocused terminal
@@ -139,12 +139,12 @@ function module.get_groups()
     groups.SignColumnSB = { bg = colors.bg_sidebar, fg = colors.fg_sidebar } -- column where |signs| are displayed
     groups.Substitute = { bg = colors.red.base, fg = colors.bg_dark } -- |:substitute| replacement text highlighting
     groups.LineNr = { fg = colors.fg_sidebar } -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    groups.MatchParen = { underline = true, bold = true, sp = colors.white1 } -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    groups.MatchParen = { underline = true, bold = true, sp = colors.white.dim } -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     groups.ModeMsg = { fg = colors.fg, bold = true } -- 'showmode' message (e.g., "-- INSERT -- ")
     groups.MsgArea = { fg = colors.fg } -- Area for messages and cmdline
     -- MsgSeparator= { } -- Separator for scrolled messages, `msgsep` flag of 'display'
-    groups.MoreMsg = { fg = colors.blue1 } -- |more-prompt|
-    groups.NonText = { fg = colors.gray4 } -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    groups.MoreMsg = { fg = colors.blue.bright } -- |more-prompt|
+    groups.NonText = { fg = colors.grey.bright } -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     groups.Normal = { fg = colors.fg, bg = colors.bg } -- normal text
     groups.NormalNC = { fg = colors.fg, bg = colors.bg } -- normal text in non-current windows
     groups.NormalSB = { fg = colors.fg_sidebar, bg = colors.bg_sidebar } -- normal text in sidebar
@@ -153,31 +153,31 @@ function module.get_groups()
     groups.FloatTitle = { fg = colors.yellow.base }
     groups.Pmenu = { bg = colors.bg_popup } -- Popup menu: normal item.
     groups.PmenuSel = { bg = colors.bg_selected } -- Popup menu: selected item.
-    groups.PmenuSbar = { bg = colors.gray2 } -- Popup menu: scrollbar.
-    groups.PmenuThumb = { bg = colors.gray2, fg = colors.gray2 } -- Popup menu: Thumb of the scrollbar.
+    groups.PmenuSbar = { bg = colors.grey.dim } -- Popup menu: scrollbar.
+    groups.PmenuThumb = { bg = colors.grey.dim, fg = colors.grey.dim } -- Popup menu: Thumb of the scrollbar.
     groups.Question = { fg = colors.info } -- |hit-enter| prompt and yes/no questions
     groups.QuickFixLine = { bg = colors.bg_visual, bold = true } -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     groups.Search = { bg = colors.bg_visual, fg = colors.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     groups.IncSearch = { bg = colors.yellow.base, fg = colors.bg_visual, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     groups.CurSearch = { link = 'IncSearch' }
-    groups.SpecialKey = { fg = colors.gray5 } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    groups.SpecialKey = { fg = colors.grey.brightest } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     groups.SpellBad = { sp = colors.error, undercurl = true } -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     groups.SpellCap = { sp = colors.warning, undercurl = true } -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     groups.SpellLocal = { sp = colors.info, undercurl = true } -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     groups.SpellRare = { sp = colors.hint, undercurl = true } -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     groups.StatusLine = { fg = colors.fg_sidebar, bg = colors.bg_statusline } -- status line of current window
-    groups.StatusLineNC = { fg = colors.gray4, bg = colors.bg_statusline } -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    groups.StatusLineNC = { fg = colors.grey.bright, bg = colors.bg_statusline } -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     groups.TabLine = { bg = colors.bg_statusline, fg = colors.fg } -- tab pages line, not active tab page label
-    groups.TabLineFill = { bg = colors.black0, fg = colors.none } -- tab pages line, where there are no labels
+    groups.TabLineFill = { bg = colors.black.dark, fg = colors.none } -- tab pages line, where there are no labels
     groups.TabLineSel = { fg = colors.fg_bright, bg = colors.bg } -- tab pages line, active tab page label
     groups.Title = { fg = colors.fg_bright, bold = true } -- titles for output from ":set all", ":autocmd" etc.
     groups.Visual = { bg = colors.bg_visual, bold = options.cursorline.bold } -- Visual mode selection
     groups.VisualNOS = { bg = colors.bg_visual } -- Visual mode selection when vim is "Not Owning the Selection".
     groups.WarningMsg = { fg = colors.warning } -- warning messages
-    groups.Whitespace = { fg = colors.gray4 } -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    groups.Whitespace = { fg = colors.grey.bright } -- "nbsp", "space", "tab" and "trail" in 'listchars'
     groups.WildMenu = { bg = colors.bg_visual } -- current match in 'wildmenu' completion
-    groups.WinBar = { bg = colors.bg_dark, fg = colors.gray5 }
-    groups.WinBarNC = { bg = colors.bg_dark, fg = colors.gray4 }
+    groups.WinBar = { bg = colors.bg_dark, fg = colors.grey.brightest }
+    groups.WinBarNC = { bg = colors.bg_dark, fg = colors.grey.bright }
 
     -- DIFF
 

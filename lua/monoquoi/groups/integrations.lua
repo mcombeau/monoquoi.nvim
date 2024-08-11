@@ -10,7 +10,7 @@ function module.get_groups()
     groups.DashboardHeader = { fg = colors.yellow.base, bold = true }
     groups.DashboardFooter = { fg = colors.cyan.base }
     groups.DashboardCenter = { fg = colors.green.base }
-    groups.DashboardShortCut = { fg = colors.gray4, bold = true }
+    groups.DashboardShortCut = { fg = colors.grey.bright, bold = true }
     groups.DashboardProjectTitle = { fg = colors.orange.base, bold = true }
     groups.DashboardProjectTitleIcon = { link = 'DashboardProjectTitle' }
     groups.DashboardProjectIcon = { fg = colors.magenta.bright }
@@ -23,10 +23,10 @@ function module.get_groups()
 
     -- Diffview.
     groups.DiffviewNormal = { bg = colors.bg_dark, fg = colors.fg }
-    groups.DiffviewStatusLine = { bg = colors.black0 }
+    groups.DiffviewStatusLine = { bg = colors.black.dark }
     groups.DiffviewFilePanelTitle = { fg = colors.orange.base, bold = true }
     groups.DiffviewFolderSign = { fg = colors.yellow.dim }
-    groups.DiffviewFolderName = { bg = colors.bg_dark, fg = colors.blue1 }
+    groups.DiffviewFolderName = { bg = colors.bg_dark, fg = colors.blue.bright }
 
     -- Gitsigns.
     groups.GitSignsAdd = { fg = colors.git.add, bg = colors.bg_sidebar }
@@ -36,49 +36,49 @@ function module.get_groups()
     groups.GitSignsDeletePreview = { link = 'GitSignsDelete' }
 
     -- Indent blankline.
-    groups.IndentBlanklineChar = { fg = colors.gray1 }
-    groups.IndentBlanklineContextChar = { fg = colors.gray2 }
-    groups.IndentBlanklineContextStart = { sp = colors.white0, underline = true }
+    groups.IndentBlanklineChar = { fg = colors.grey.dimmer }
+    groups.IndentBlanklineContextChar = { fg = colors.grey.dim }
+    groups.IndentBlanklineContextStart = { sp = colors.white.dark, underline = true }
 
     -- Lazy.
     groups.LazyH1 = { fg = colors.yellow.base, bold = true }
     groups.LazyButtonActive = { link = 'LazyH1' }
-    groups.LazyButton = { fg = colors.white0 }
+    groups.LazyButton = { fg = colors.white.dark }
     groups.LazySpecial = { fg = colors.yellow.base }
     groups.LazyProgressDone = { fg = colors.green.bright }
-    groups.LazyProgressTodo = { fg = colors.gray4 }
+    groups.LazyProgressTodo = { fg = colors.grey.bright }
     groups.LazyCommitType = { fg = colors.yellow.base }
 
     -- Leap.
-    groups.LeapLabelPrimary = { bg = colors.yellow.dim, fg = colors.black0, bold = true }
-    if options.leap.dim_backdrop then groups.LeapBackdrop = { fg = colors.gray4 } end
+    groups.LeapLabelPrimary = { bg = colors.yellow.dim, fg = colors.black.dark, bold = true }
+    if options.leap.dim_backdrop then groups.LeapBackdrop = { fg = colors.grey.bright } end
 
     -- LSP Signature.
     groups.LspSignatureActiveParameter = { bg = colors.bg_float, underline = true, bold = true }
 
     -- LSP Saga.
-    groups.SagaBorder = { bg = colors.black2, fg = colors.fg_float_border }
-    groups.SagaNormal = { bg = colors.black2 }
+    groups.SagaBorder = { bg = colors.black.light, fg = colors.fg_float_border }
+    groups.SagaNormal = { bg = colors.black.light }
     groups.HoverBorder = { link = 'FloatBorder' }
     groups.HoverNormal = { link = 'NormalFloat' }
     groups.RenameNormal = { bg = colors.bg_float, fg = colors.yellow.bright }
     groups.RenameBorder = { link = 'FloatBorder' }
     groups.DiagnosticPos = { fg = colors.fg }
     groups.DiagnosticWord = { fg = colors.fg }
-    groups.DiagnosticSource = { fg = colors.gray4 }
+    groups.DiagnosticSource = { fg = colors.grey.bright }
     groups.DiagnosticNormal = { link = 'NormalFloat' }
     groups.DiagnosticShowNormal = { link = 'NormalFloat' }
     groups.DiagnosticShowBorder = { link = 'FloatBorder' }
     groups.DiagnosticBorder = { link = 'FloatBorder' }
-    groups.SagaBorder = { bg = colors.black2, fg = colors.fg_float_border }
-    groups.SagaNormal = { bg = colors.black2 }
+    groups.SagaBorder = { bg = colors.black.light, fg = colors.fg_float_border }
+    groups.SagaNormal = { bg = colors.black.light }
     groups.HoverBorder = { link = 'FloatBorder' }
     groups.HoverNormal = { link = 'NormalFloat' }
     groups.RenameNormal = { bg = colors.bg_float, fg = colors.yellow.bright }
     groups.RenameBorder = { link = 'FloatBorder' }
     groups.DiagnosticPos = { fg = colors.fg }
     groups.DiagnosticWord = { fg = colors.fg }
-    groups.DiagnosticSource = { fg = colors.gray4 }
+    groups.DiagnosticSource = { fg = colors.grey.bright }
     groups.DiagnosticNormal = { link = 'NormalFloat' }
     groups.DiagnosticShowNormal = { link = 'NormalFloat' }
     groups.DiagnosticShowBorder = { link = 'FloatBorder' }
@@ -101,28 +101,28 @@ function module.get_groups()
     -- Nvim tree.
     groups.NvimTreeNormal = { fg = colors.fg, bg = colors.bg }
     groups.NvimTreeNormalNC = { fg = colors.fg, bg = colors.bg }
-    groups.NvimTreeFolderName = { fg = colors.blue1 }
+    groups.NvimTreeFolderName = { fg = colors.blue.bright }
     groups.NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' }
     groups.NvimTreeEmptyFolderName = { link = 'NvimTreeFolderName' }
     groups.NvimTreeFolderIcon = { fg = colors.yellow.dim }
     groups.NvimTreeSpecialFile = { fg = colors.magenta.bright }
-    groups.NvimTreeRootFolder = { fg = colors.gray4 }
-    groups.NvimTreeGitDirty = { fg = colors.gray4 }
-    groups.NvimTreeGitNew = { fg = colors.gray4 }
-    groups.NvimTreeGitDeleted = { fg = colors.gray4 }
-    groups.NvimTreeGitStaged = { fg = colors.gray4 }
-    groups.NvimTreeIndentMarker = { fg = colors.gray4 }
+    groups.NvimTreeRootFolder = { fg = colors.grey.bright }
+    groups.NvimTreeGitDirty = { fg = colors.grey.bright }
+    groups.NvimTreeGitNew = { fg = colors.grey.bright }
+    groups.NvimTreeGitDeleted = { fg = colors.grey.bright }
+    groups.NvimTreeGitStaged = { fg = colors.grey.bright }
+    groups.NvimTreeIndentMarker = { fg = colors.grey.bright }
     groups.NvimTreeWinSeparator = { fg = colors.bg_dark, bg = colors.bg }
-    groups.NvimTreeCursorLine = { bg = colors.gray1 }
+    groups.NvimTreeCursorLine = { bg = colors.grey.dimmer }
     groups.NvimTreeCursor = { bg = colors.none, fg = colors.none }
-    groups.NvimTreeSymlink = { fg = colors.blue2 }
+    groups.NvimTreeSymlink = { fg = colors.blue.dim }
 
     -- Neo tree.
     groups.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
     groups.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
     groups.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
     groups.NeoTreeFileName = { link = 'NvimTreeNormal' }
-    groups.NeoTreeFileIcon = { fg = colors.blue2 }
+    groups.NeoTreeFileIcon = { fg = colors.blue.dim }
     groups.NeoTreeFileNameOpened = { fg = colors.fg }
     groups.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
     groups.NeoTreeGitAdded = { fg = colors.git.add }
@@ -135,14 +135,14 @@ function module.get_groups()
 
     -- Noice Flat.
     groups.NoiceLspProgressTitle = { fg = colors.yellow.base, bg = colors.bg, bold = true }
-    groups.NoiceLspProgressClient = { fg = colors.gray4, bg = colors.bg }
+    groups.NoiceLspProgressClient = { fg = colors.grey.bright, bg = colors.bg }
     groups.NoiceLspProgressSpinner = { fg = colors.cyan.bright, bg = colors.bg }
-    groups.NoiceFormatProgressDone = { bg = colors.green.bright, fg = colors.black0 }
-    groups.NoiceFormatProgressTodo = { bg = colors.gray5, fg = colors.black0 }
+    groups.NoiceFormatProgressDone = { bg = colors.green.bright, fg = colors.black.dark }
+    groups.NoiceFormatProgressTodo = { bg = colors.grey.brightest, fg = colors.black.dark }
     groups.NoiceCmdline = { bg = colors.bg_dark, fg = colors.fg }
     groups.NoiceCmdlineIcon = { bg = colors.bg_float, fg = colors.yellow.base }
     groups.NoiceCmdlineIconSearch = { bg = colors.bg_dark, fg = colors.yellow.base }
-    groups.NoicePopupBorder = { fg = colors.black0, bg = colors.bg_float }
+    groups.NoicePopupBorder = { fg = colors.black.dark, bg = colors.bg_float }
     groups.NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' }
     groups.NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' }
     groups.NoiceCmdlinePopup = { bg = colors.bg_float }
@@ -156,13 +156,13 @@ function module.get_groups()
     end
 
     -- Nvim cmp.
-    groups.CmpItemAbbrDeprecated = { fg = colors.grey4 }
-    groups.CmpItemAbbrMatch = { fg = colors.blue1, bold = true }
+    groups.CmpItemAbbrDeprecated = { fg = colors.grey.bright }
+    groups.CmpItemAbbrMatch = { fg = colors.blue.bright, bold = true }
     groups.CmpItemAbbrMatchFuzzy = { link = 'CmpItemAbbrMatch' }
     groups.CmpItemKindField = { link = '@field' }
     groups.CmpItemKindProperty = { link = '@property' }
     groups.CmpItemKindEvent = { link = 'Type' }
-    groups.CmpItemKindText = { fg = colors.grey4 }
+    groups.CmpItemKindText = { fg = colors.grey.bright }
     groups.CmpItemKindEnum = { link = 'Type' }
     groups.CmpItemKindKeyword = { link = 'Keyword' }
     groups.CmpItemKindConstant = { link = 'Constant' }
@@ -174,9 +174,9 @@ function module.get_groups()
     groups.CmpItemKindModule = { fg = colors.yellow.dim }
     groups.CmpItemKindOperator = { link = 'Operator' }
     groups.CmpItemKindVariable = { fg = colors.cyan.base }
-    groups.CmpItemKindFile = { fg = colors.blue1 }
+    groups.CmpItemKindFile = { fg = colors.blue.bright }
     groups.CmpItemKindUnit = { link = 'Constant' }
-    groups.CmpItemKindSnippet = { fg = colors.blue1 }
+    groups.CmpItemKindSnippet = { fg = colors.blue.bright }
     groups.CmpItemKindFolder = { fg = colors.yellow.dark }
     groups.CmpItemKindMethod = { link = 'Function' }
     groups.CmpItemKindValue = { link = 'Constant' }
@@ -195,9 +195,9 @@ function module.get_groups()
     groups.DapUIStop = { fg = colors.red.bright, bold = true }
     groups.DapUIRestart = { fg = colors.green.bright, bold = true }
     groups.DapUIPlayPause = { fg = colors.green.bright, bold = true }
-    groups.DapUIStepInto = { fg = colors.blue2, bold = true }
-    groups.DapUIStepOver = { fg = colors.blue2, bold = true }
-    groups.DapUIStepOut = { fg = colors.blue2, bold = true }
+    groups.DapUIStepInto = { fg = colors.blue.dim, bold = true }
+    groups.DapUIStepOver = { fg = colors.blue.dim, bold = true }
+    groups.DapUIStepOut = { fg = colors.blue.dim, bold = true }
     groups.DapUIStepBack = { fg = colors.blue3, bold = true }
     groups.DapUIValue = { fg = colors.magenta.bright }
     groups.DapUIWatchesValue = { fg = colors.green.bright }
@@ -224,9 +224,9 @@ function module.get_groups()
     groups.NotifyDEBUGIcon = { fg = colors.orange.bright }
     groups.NotifyDEBUGTitle = { fg = colors.orange.bright, bold = true }
     groups.NotifyDEBUGBody = { fg = colors.fg }
-    groups.NotifyTRACEBorder = { fg = colors.gray5 }
-    groups.NotifyTRACEIcon = { fg = colors.gray5 }
-    groups.NotifyTRACETitle = { fg = colors.gray5, bold = true }
+    groups.NotifyTRACEBorder = { fg = colors.grey.brightest }
+    groups.NotifyTRACEIcon = { fg = colors.grey.brightest }
+    groups.NotifyTRACETitle = { fg = colors.grey.brightest, bold = true }
     groups.NotifyTRACEBody = { fg = colors.fg }
 
     -- Telescope Classic.
@@ -234,17 +234,17 @@ function module.get_groups()
     groups.TelescopePromptNormal = { bg = colors.bg }
     groups.TelescopeResultsNormal = { bg = colors.bg }
     groups.TelescopePreviewNormal = { bg = colors.bg }
-    groups.TelescopePreviewLine = { bg = colors.gray2 }
+    groups.TelescopePreviewLine = { bg = colors.grey.dim }
     groups.TelescopeSelection = { bg = colors.bg, fg = colors.yellow.bright, bold = false }
     groups.TelescopeSelectionCaret = { fg = colors.yellow.bright, bg = colors.bg, bold = true }
-    groups.TelescopePreviewTitle = { fg = colors.white0, bg = colors.bg, bold = true }
-    groups.TelescopeResultsTitle = { fg = colors.white0, bg = colors.bg, bold = true }
-    groups.TelescopePromptTitle = { fg = colors.white0, bg = colors.bg, bold = true }
-    groups.TelescopeTitle = { fg = colors.white0, bg = colors.bg, bold = true }
-    groups.TelescopeBorder = { fg = colors.white0, bg = colors.bg }
-    groups.TelescopePromptBorder = { fg = colors.white0, bg = colors.bg }
-    groups.TelescopeResultsBorder = { fg = colors.white0, bg = colors.bg }
-    groups.TelescopePreviewBorder = { fg = colors.white0, bg = colors.bg }
+    groups.TelescopePreviewTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
+    groups.TelescopeResultsTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
+    groups.TelescopePromptTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
+    groups.TelescopeTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
+    groups.TelescopeBorder = { fg = colors.white.dark, bg = colors.bg }
+    groups.TelescopePromptBorder = { fg = colors.white.dark, bg = colors.bg }
+    groups.TelescopeResultsBorder = { fg = colors.white.dark, bg = colors.bg }
+    groups.TelescopePreviewBorder = { fg = colors.white.dark, bg = colors.bg }
     groups.TelescopeMatching = { bold = true }
     groups.TelescopePromptPrefix = { bg = colors.bg, fg = colors.orange.bright }
     groups.TelescopeMultiIcon = { fg = colors.yellow.bright, bg = colors.bg, bold = true }
@@ -253,23 +253,23 @@ function module.get_groups()
     -- Telescope Flat.
     if options.telescope.style == 'flat' then
         groups.TelescopeNormal = { bg = colors.bg_float }
-        groups.TelescopePromptNormal = { bg = colors.black2 }
+        groups.TelescopePromptNormal = { bg = colors.black.light }
         groups.TelescopeResultsNormal = { bg = colors.bg_float }
         groups.TelescopePreviewNormal = { bg = colors.bg_float }
         groups.TelescopeSelection = { bg = colors.bg_float, fg = colors.yellow.bright }
         groups.TelescopeSelectionCaret = { fg = colors.yellow.bright, bg = colors.bg_float, bold = true }
-        groups.TelescopePreviewTitle = { bg = colors.blue2, fg = colors.black0, bold = true }
-        groups.TelescopeResultsTitle = { bg = colors.orange.base, fg = colors.black0, bold = true }
-        groups.TelescopePromptTitle = { bg = colors.orange.base, fg = colors.black0, bold = true }
-        groups.TelescopeTitle = { bg = colors.orange.base, fg = colors.black0, bold = true }
-        groups.TelescopeBorder = { fg = colors.black0, bg = colors.black0 }
-        groups.TelescopePromptBorder = { bg = colors.black2, fg = colors.black0 }
-        groups.TelescopeResultsBorder = { bg = colors.bg_float, fg = colors.black0 }
-        groups.TelescopePreviewBorder = { bg = colors.bg_float, fg = colors.black0 }
+        groups.TelescopePreviewTitle = { bg = colors.blue.dim, fg = colors.black.dark, bold = true }
+        groups.TelescopeResultsTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
+        groups.TelescopePromptTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
+        groups.TelescopeTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
+        groups.TelescopeBorder = { fg = colors.black.dark, bg = colors.black.dark }
+        groups.TelescopePromptBorder = { bg = colors.black.light, fg = colors.black.dark }
+        groups.TelescopeResultsBorder = { bg = colors.bg_float, fg = colors.black.dark }
+        groups.TelescopePreviewBorder = { bg = colors.bg_float, fg = colors.black.dark }
         groups.TelescopeMultiIcon = { fg = colors.yellow.bright, bg = colors.bg_float, bold = true }
         groups.TelescopeMultiSelection = { bg = colors.bg_float }
-        groups.TelescopePromptPrefix = { bg = colors.black2, fg = colors.orange.bright }
-        groups.TelescopePreviewLine = { bg = colors.gray1 }
+        groups.TelescopePromptPrefix = { bg = colors.black.light, fg = colors.orange.bright }
+        groups.TelescopePreviewLine = { bg = colors.grey.dimmer }
     end
 
     -- Treesitter.
@@ -337,9 +337,9 @@ function module.get_groups()
     groups['@text.title'] = { link = 'Title' } -- Text that is part of a title.
     groups['@text.uri'] = { underline = true } -- Any URI like a link or email.
     groups['@text.literal'] = { link = 'String' }
-    groups['@text.literal.markdown_inline'] = { bg = colors.black2, fg = colors.fg }
+    groups['@text.literal.markdown_inline'] = { bg = colors.black.light, fg = colors.fg }
     groups['@text.reference'] = { link = 'Link' }
-    groups['@text.todo.unchecked'] = { fg = colors.blue1 } -- For brackets and parens.
+    groups['@text.todo.unchecked'] = { fg = colors.blue.bright } -- For brackets and parens.
     groups['@text.todo.checked'] = { fg = colors.green.bright } -- For brackets and parens.
     groups['@text.warning'] = { fg = colors.warning }
     groups['@text.danger'] = { fg = colors.error }
@@ -357,7 +357,7 @@ function module.get_groups()
     groups['@markup.heading.2'] = { fg = colors.orange.base, bold = true }
     groups['@markup.heading.3'] = { fg = colors.magenta.base, bold = true }
     groups['@markup.heading.4'] = { fg = colors.green.base }
-    groups['@markup.heading.5'] = { fg = colors.blue2, italic = true }
+    groups['@markup.heading.5'] = { fg = colors.blue.dim, italic = true }
     groups['@markup.heading.6'] = { fg = colors.cyan.base, italic = true }
     groups['@markup.italic'] = { italic = true }
     groups['@markup.list'] = { link = '@operator' }
@@ -370,14 +370,14 @@ function module.get_groups()
     groups['@markup.link.url'] = { link = 'Underlined' }
     groups['@markup.math'] = { link = 'Special' }
     groups['@markup.raw'] = { link = 'String' }
-    groups['@markup.raw.markdown_inline'] = { bg = colors.black2, fg = colors.fg }
+    groups['@markup.raw.markdown_inline'] = { bg = colors.black.light, fg = colors.fg }
     groups['@markup.strong'] = { bold = true }
     groups['@markup.strikethrough'] = { strikethrough = true }
     groups['@markup.underline'] = { underline = true }
     -- TSX
-    groups['@tag.tsx'] = { fg = colors.blue1 }
-    groups['@constructor.tsx'] = { fg = colors.blue1 }
-    groups['@tag.delimiter.tsx'] = { fg = colors.blue1 }
+    groups['@tag.tsx'] = { fg = colors.blue.bright }
+    groups['@constructor.tsx'] = { fg = colors.blue.bright }
+    groups['@tag.delimiter.tsx'] = { fg = colors.blue.bright }
     --LSP Semantic Token Groups
     groups['@lsp.type.boolean'] = { link = 'Boolean' }
     groups['@lsp.type.builtinType'] = { link = 'Type' }
@@ -419,7 +419,7 @@ function module.get_groups()
     groups['@character'] = { link = 'Character' }
     groups['@character.special'] = { link = 'SpecialChar' }
     groups['@string.special'] = { fg = colors.yellow.base } -- For escape characters within a string.
-    groups['@tag'] = { fg = colors.blue1 } -- Tags like html tag names.
+    groups['@tag'] = { fg = colors.blue.bright } -- Tags like html tag names.
     groups['@tag.delimiter'] = { fg = colors.fg } -- Tag delimiter like `<` `>` `/`
     groups['@tag.attribute'] = { fg = colors.yellow.base } -- Tag attribute like `id` `class`
     groups['@constant'] = { link = 'Constant' }
@@ -457,11 +457,11 @@ function module.get_groups()
     local bg
     local fg
     if options.ts_context.dark_background then
-        bg = colors.black1
-        fg = colors.gray1
+        bg = colors.black.dim
+        fg = colors.grey.dimmer
     else
-        bg = colors.gray1
-        fg = colors.gray4
+        bg = colors.grey.dimmer
+        fg = colors.grey.bright
     end
     groups.TreesitterContext = { bg = bg }
     groups.TreesitterContextLineNumber = { fg = fg, bg = bg }
@@ -483,10 +483,10 @@ function module.get_groups()
     -- Trouble.
     groups.TroubleNormal = { bg = colors.bg_float }
     groups.TroubleText = { fg = colors.fg }
-    groups.TroubleCount = { fg = colors.white1, bg = colors.gray2 }
-    groups.TroubleIndent = { fg = colors.gray1 }
+    groups.TroubleCount = { fg = colors.white.dim, bg = colors.grey.dim }
+    groups.TroubleIndent = { fg = colors.grey.dimmer }
     groups.TroubleFile = { fg = colors.cyan.bright }
-    groups.TroubleFoldIcon = { fg = colors.gray1 }
+    groups.TroubleFoldIcon = { fg = colors.grey.dimmer }
 
     -- Vimtex.
     groups.texGroup = { fg = colors.fg }
@@ -501,13 +501,13 @@ function module.get_groups()
     groups.texMathZoneEnv = { fg = colors.fg }
     groups.texMathZoneTI = { fg = colors.fg }
     groups.texMathDelim = { fg = colors.fg }
-    groups.texMathDelimZoneTI = { fg = colors.blue2 }
+    groups.texMathDelimZoneTI = { fg = colors.blue.dim }
     groups.texMathSuper = { fg = colors.fg }
     groups.texFileArg = { fg = colors.green.base }
     groups.texRefArg = { fg = colors.magenta.bright }
     groups.texGroupError = { link = 'DiagnosticError' }
     groups.texMathSub = { fg = colors.fg }
-    groups.texCmdEnv = { fg = colors.blue2 }
+    groups.texCmdEnv = { fg = colors.blue.dim }
     groups.texSpecialChar = { fg = colors.orange.base }
     groups.texLigature = { fg = colors.fg }
     groups.texFileOpt = { fg = colors.fg }
@@ -517,9 +517,9 @@ function module.get_groups()
     -- Whichkey.
     groups.WhichKey = { fg = colors.yellow.base }
     groups.WhichKeyFloat = { bg = colors.bg_float }
-    groups.WhichKeyDesc = { fg = colors.white0 }
+    groups.WhichKeyDesc = { fg = colors.white.dark }
     groups.WhichKeyGroup = { fg = colors.orange.bright, bold = true }
-    groups.WhichKeyBorder = { fg = colors.black0, bg = colors.bg_float }
+    groups.WhichKeyBorder = { fg = colors.black.dark, bg = colors.bg_float }
     -- TODO: Unsure.
     groups.WhichKeySeperator = {}
     groups.WhichKeyValue = {}
