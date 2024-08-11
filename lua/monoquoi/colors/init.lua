@@ -13,17 +13,17 @@ function colors.extend_palette()
 
     -- Backgrounds
     colors.bg = (options.transparent_bg and colors.none)
-        or ((options.swap_backgrounds and colors.black.dim) or colors.grey.dark)
+        or ((options.swap_backgrounds and colors.black.dark) or colors.black.dim)
     colors.bg_dark = (options.transparent_bg and colors.none) or colors.black.dark
     colors.bg_sidebar = (options.transparent_bg and colors.none) or colors.bg
     colors.bg_popup = (options.transparent_bg and colors.none) or colors.bg
     colors.bg_statusline = colors.black.dark
-    colors.bg_selected = utils.blend(colors.grey.dim, colors.black.dark, 0.4)
-    colors.bg_fold = colors.grey.dim
+    colors.bg_selected = utils.blend(colors.grey.dark, colors.black.dark, 0.4)
+    colors.bg_fold = colors.grey.dark
 
     -- Cursorline Background
     if options.cursorline.theme == 'light' then
-        options.cursorline.bg = colors.grey.dimmer
+        options.cursorline.bg = colors.black.bright
     else
         options.cursorline.bg = colors.black.dark
     end
@@ -39,7 +39,7 @@ function colors.extend_palette()
     colors.fg = colors.white.dark
     colors.fg_bright = colors.white.dim
     colors.fg_dark = colors.white.dark
-    colors.fg_sidebar = colors.grey.dim
+    colors.fg_sidebar = colors.grey.dark
     colors.fg_fold = colors.fg
     colors.fg_selected = colors.fg_bright
 
@@ -51,7 +51,7 @@ function colors.extend_palette()
 
     -- Floating windows
     colors.bg_float = (options.transparent_bg and colors.none)
-        or ((options.swap_backgrounds and colors.grey.dark) or colors.black.dim)
+        or ((options.swap_backgrounds and colors.black.lighter) or colors.black.dim)
     colors.fg_float = colors.fg
     colors.bg_float_border = colors.bg_float
     colors.fg_float_border = colors.border_fg
@@ -80,7 +80,7 @@ function colors.extend_palette()
     colors.info = colors.blue.dim
 
     -- Misc
-    colors.comment = colors.grey.bright
+    colors.comment = colors.grey.dark
 end
 
 -- Sometimes the palette is required before the theme has been loaded,

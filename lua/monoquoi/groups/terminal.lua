@@ -5,7 +5,7 @@ function module.get_groups()
     local groups = {}
 
     groups.terminal_color_0 = colors.black.dark
-    groups.terminal_color_8 = colors.grey.dim
+    groups.terminal_color_8 = colors.grey.dark
     groups.terminal_color_1 = colors.red.base
     groups.terminal_color_9 = colors.red.bright
     groups.terminal_color_2 = colors.green.base

@@ -18,7 +18,7 @@ local defaults = {
     -- Adjusts some colors to make the theme a bit nicer (imo).
     reduced_blue = false,
     -- Swop the dark background with the normal one.
-    swap_backgrounds = true,
+    swap_backgrounds = false,
     -- Override the styling of any highlight group.
     override = {},
     -- Cursorline options.  Also includes visual/selection.

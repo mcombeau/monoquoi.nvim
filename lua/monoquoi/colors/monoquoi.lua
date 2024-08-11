@@ -1,29 +1,31 @@
--- The Nord palette: https://www.nordtheme.com/.
--- This file has a bunch of added colors.
-
 local palette = {
 
     none = 'NONE',
 
     accent_default = '#bf9540',
+    black = {
+        dark = '#191D24',
+        dim = '#1E222A',
+        light = '#222630',
+        lighter = '#242933', -- bg
+        bright = '#2E3440',
+    },
     grey = {
-        dark = '#242933', -- bg
-        dimmer = '#2E3440',
-        dim = '#3B4252',
-        light = '#434C5E',
-        bright = '#4C566A',
-        brighter = '#60728A',
+        -- light = '#434C5E',
+        -- bright = '#4C566A',
+        -- brighter = '#60728A',
+
+        dark = '#3B4252',
+        dim = '#576279',
+        light = '#8690a8',
+        bright = '#a1a9bb',
+        brighter = '#bcc1ce',
     },
     white = {
         dark = '#C0C8D8',
         dim = '#D8DEE9',
         light = '#E5E9F0',
         bright = '#ECEFF4',
-    },
-    black = {
-        dark = '#191D24',
-        dim = '#1E222A',
-        light = '#222630',
     },
     blue = {
         base = '#5E81AC',
