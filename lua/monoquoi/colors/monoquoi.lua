@@ -11,10 +11,6 @@ local palette = {
         bright = '#2E3440',
     },
     grey = {
-        -- light = '#434C5E',
-        -- bright = '#4C566A',
-        -- brighter = '#60728A',
-
         dark = '#3B4252',
         dim = '#576279',
         light = '#8690a8',

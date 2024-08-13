@@ -80,7 +80,7 @@ function colors.extend_palette()
     colors.info = colors.blue.dim
 
     -- Misc
-    colors.comment = colors.grey.dark
+    colors.comment = colors.grey.dim
 end
 
 -- Sometimes the palette is required before the theme has been loaded,
