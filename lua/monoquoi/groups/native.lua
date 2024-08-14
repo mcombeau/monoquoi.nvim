@@ -150,7 +150,7 @@ function module.get_groups()
     groups.NormalSB = { fg = colors.fg_sidebar, bg = colors.bg_sidebar } -- normal text in sidebar
     groups.NormalFloat = { fg = colors.fg_float, bg = colors.bg_float } -- Normal text in floating windows.
     groups.FloatBorder = { fg = colors.fg_float_border, bg = colors.bg_float_border }
-    groups.FloatTitle = { fg = colors.yellow.base }
+    groups.FloatTitle = { fg = colors.accent, bg = colors.bg_float_border }
     groups.Pmenu = { bg = colors.bg_popup } -- Popup menu: normal item.
     groups.PmenuSel = { bg = colors.bg_selected } -- Popup menu: selected item.
     groups.PmenuSbar = { bg = colors.grey.dark } -- Popup menu: scrollbar.

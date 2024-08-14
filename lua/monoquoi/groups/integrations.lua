@@ -41,10 +41,10 @@ function module.get_groups()
     groups.IndentBlanklineContextStart = { sp = colors.white.dark, underline = true }
 
     -- Lazy.
-    groups.LazyH1 = { fg = colors.yellow.base, bold = true }
+    groups.LazyH1 = { fg = colors.accent, bold = true }
     groups.LazyButtonActive = { link = 'LazyH1' }
     groups.LazyButton = { fg = colors.white.dark }
-    groups.LazySpecial = { fg = colors.yellow.base }
+    groups.LazySpecial = { fg = colors.accent }
     groups.LazyProgressDone = { fg = colors.green.bright }
     groups.LazyProgressTodo = { fg = colors.grey.bright }
     groups.LazyCommitType = { fg = colors.yellow.base }
@@ -61,7 +61,7 @@ function module.get_groups()
     groups.SagaNormal = { bg = colors.black.light }
     groups.HoverBorder = { link = 'FloatBorder' }
     groups.HoverNormal = { link = 'NormalFloat' }
-    groups.RenameNormal = { bg = colors.bg_float, fg = colors.yellow.bright }
+    groups.RenameNormal = { bg = colors.bg_float, fg = colors.accent }
     groups.RenameBorder = { link = 'FloatBorder' }
     groups.DiagnosticPos = { fg = colors.fg }
     groups.DiagnosticWord = { fg = colors.fg }
@@ -74,7 +74,7 @@ function module.get_groups()
     groups.SagaNormal = { bg = colors.black.light }
     groups.HoverBorder = { link = 'FloatBorder' }
     groups.HoverNormal = { link = 'NormalFloat' }
-    groups.RenameNormal = { bg = colors.bg_float, fg = colors.yellow.bright }
+    groups.RenameNormal = { bg = colors.bg_float, fg = colors.accent }
     groups.RenameBorder = { link = 'FloatBorder' }
     groups.DiagnosticPos = { fg = colors.fg }
     groups.DiagnosticWord = { fg = colors.fg }
