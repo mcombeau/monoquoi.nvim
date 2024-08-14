@@ -129,7 +129,7 @@ function module.get_groups()
     groups.NeoTreeGitAdded = { fg = colors.git.add }
     groups.NeoTreeGitConflict = { fg = colors.magenta.bright }
     groups.NeoTreeGitModified = { fg = colors.git.change }
-    groups.NeoTreeGitUntracked = { fg = colors.fg_sidebar }
+    groups.NeoTreeGitUntracked = { fg = colors.grey.light }
     groups.NeoTreeNormal = { link = 'NvimTreeNormal' }
     groups.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
     groups.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
@@ -140,9 +140,9 @@ function module.get_groups()
     groups.NoiceLspProgressSpinner = { fg = colors.cyan.bright, bg = colors.bg }
     groups.NoiceFormatProgressDone = { bg = colors.green.bright, fg = colors.black.dark }
     groups.NoiceFormatProgressTodo = { bg = colors.grey.brightest, fg = colors.black.dark }
-    groups.NoiceCmdline = { bg = colors.bg_dark, fg = colors.fg }
-    groups.NoiceCmdlineIcon = { bg = colors.bg_float, fg = colors.yellow.base }
-    groups.NoiceCmdlineIconSearch = { bg = colors.bg_dark, fg = colors.yellow.base }
+    groups.NoiceCmdline = { bg = colors.bg_dark, fg = colors.accent }
+    groups.NoiceCmdlineIcon = { bg = colors.bg_float, fg = colors.accent }
+    groups.NoiceCmdlineIconSearch = { bg = colors.bg_dark, fg = colors.accent }
     groups.NoicePopupBorder = { fg = colors.black.dark, bg = colors.bg_float }
     groups.NoiceCmdlinePopupBorder = { link = 'NoicePopupBorder' }
     groups.NoiceCmdlinePopupBorderSearch = { link = 'NoicePopupBorder' }
@@ -150,10 +150,10 @@ function module.get_groups()
 
     -- Noice Classic.
     if options.noice.style == 'classic' then
-        groups.NoiceCmdline = { bg = colors.bg, fg = colors.cyan.base }
+        groups.NoiceCmdline = { bg = colors.bg, fg = colors.accent }
         groups.NoiceCmdlinePopup = { bg = colors.bg }
-        groups.NoicePopupBorder = { bg = colors.bg, fg = colors.cyan.base }
-        groups.NoiceCmdlineIcon = { bg = colors.bg, fg = colors.yellow.bright }
+        groups.NoicePopupBorder = { bg = colors.bg, fg = colors.accent }
+        groups.NoiceCmdlineIcon = { bg = colors.bg, fg = colors.accent }
     end
 
     -- Nvim cmp.
