@@ -236,9 +236,9 @@ function module.get_groups()
     groups.TelescopeResultsNormal = { bg = colors.bg }
     groups.TelescopePreviewNormal = { bg = colors.bg }
     groups.TelescopePreviewLine = { bg = colors.grey.dark }
-    groups.TelescopeSelection = { bg = colors.bg, fg = colors.yellow.bright, bold = false }
-    groups.TelescopeSelectionCaret = { fg = colors.yellow.bright, bg = colors.bg, bold = true }
-    groups.TelescopePreviewTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
+    groups.TelescopeSelection = { bg = colors.bg, fg = colors.accent, bold = false }
+    groups.TelescopeSelectionCaret = { fg = colors.accent, bg = colors.bg, bold = true }
+    groups.TelescopePreviewTitle = { fg = colors.accent, bg = colors.bg, bold = true }
     groups.TelescopeResultsTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
     groups.TelescopePromptTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
     groups.TelescopeTitle = { fg = colors.white.dark, bg = colors.bg, bold = true }
@@ -247,8 +247,8 @@ function module.get_groups()
     groups.TelescopeResultsBorder = { fg = colors.white.dark, bg = colors.bg }
     groups.TelescopePreviewBorder = { fg = colors.white.dark, bg = colors.bg }
     groups.TelescopeMatching = { bold = true }
-    groups.TelescopePromptPrefix = { bg = colors.bg, fg = colors.orange.bright }
-    groups.TelescopeMultiIcon = { fg = colors.yellow.bright, bg = colors.bg, bold = true }
+    groups.TelescopePromptPrefix = { bg = colors.bg, fg = colors.accent }
+    groups.TelescopeMultiIcon = { fg = colors.accent, bg = colors.bg, bold = true }
     groups.TelescopeMultiSelection = { bg = colors.bg }
 
     -- Telescope Flat.
@@ -257,19 +257,19 @@ function module.get_groups()
         groups.TelescopePromptNormal = { bg = colors.black.light }
         groups.TelescopeResultsNormal = { bg = colors.bg_float }
         groups.TelescopePreviewNormal = { bg = colors.bg_float }
-        groups.TelescopeSelection = { bg = colors.bg_float, fg = colors.yellow.bright }
-        groups.TelescopeSelectionCaret = { fg = colors.yellow.bright, bg = colors.bg_float, bold = true }
-        groups.TelescopePreviewTitle = { bg = colors.blue.dim, fg = colors.black.dark, bold = true }
-        groups.TelescopeResultsTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
-        groups.TelescopePromptTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
-        groups.TelescopeTitle = { bg = colors.orange.base, fg = colors.black.dark, bold = true }
+        groups.TelescopeSelection = { bg = colors.bg_float, fg = colors.accent }
+        groups.TelescopeSelectionCaret = { fg = colors.accent, bg = colors.bg_float, bold = true }
+        groups.TelescopePreviewTitle = { bg = colors.black.light, fg = colors.accent, bold = true }
+        groups.TelescopeResultsTitle = { bg = colors.black.light, fg = colors.white.light, bold = true }
+        groups.TelescopePromptTitle = { bg = colors.accent, fg = colors.black.dark, bold = true }
+        groups.TelescopeTitle = { bg = colors.accent, fg = colors.black.dark, bold = true }
         groups.TelescopeBorder = { fg = colors.black.dark, bg = colors.black.dark }
-        groups.TelescopePromptBorder = { bg = colors.black.light, fg = colors.black.dark }
-        groups.TelescopeResultsBorder = { bg = colors.bg_float, fg = colors.black.dark }
-        groups.TelescopePreviewBorder = { bg = colors.bg_float, fg = colors.black.dark }
-        groups.TelescopeMultiIcon = { fg = colors.yellow.bright, bg = colors.bg_float, bold = true }
+        groups.TelescopePromptBorder = { bg = colors.black.light, fg = colors.accent }
+        groups.TelescopeResultsBorder = { bg = colors.bg_float, fg = colors.white.dark }
+        groups.TelescopePreviewBorder = { bg = colors.bg_float, fg = colors.accent }
+        groups.TelescopeMultiIcon = { fg = colors.accent, bg = colors.bg_float, bold = true }
         groups.TelescopeMultiSelection = { bg = colors.bg_float }
-        groups.TelescopePromptPrefix = { bg = colors.black.light, fg = colors.orange.bright }
+        groups.TelescopePromptPrefix = { bg = colors.black.light, fg = colors.accent }
         groups.TelescopePreviewLine = { bg = colors.black.bright }
     end
 
